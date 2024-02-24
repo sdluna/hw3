@@ -1,8 +1,22 @@
 <h1><%= @place["name"]%></h1>
 
-<h2>Details</h2>
-<p>To be populated in Part 2<p>
+<h2>Entries</h2>
+<p>
+<ul>
+<%for entry in @entries%>
+  <li>
+    <%=entry["title"]%>
+    <%=entry["date"]%>
+    <%=entry["description"]%>
+  </li>
+  <%end%>
+</ul>
+</p>
 
 <p>
   <a href="/places">Back to Places I've Been</a>
+ </p>
+
+ <p>
+  <a href="/entries/new">New Entry</a>
  </p>
