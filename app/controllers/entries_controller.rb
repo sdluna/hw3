@@ -13,18 +13,17 @@ class EntriesController < ApplicationController
 
   def create
     #new entry
-    @entry = Entry.new 
+    @entry=Entry.new 
     #data we enter
-    @entry["title"] = params["title"]
-    @entry["description"] = params["description"]
-    @entry["date"]= params["date"]
+    @entry["title"]=params["title"]
+    @entry["description"]=params["description"]
+    #@entry["date"]=params["date"]
     #tie to place
-    @entry["place_id"] = params["place_id"]
+    @entry["place_id"]=params["place_id"]
     #save
-    @place.save
+    @entry.save
     #redirect
-    
-    #COME BACK FOR THIS
+    redirect_to "/places/#{params["place_id"]}"
   end 
 
 
