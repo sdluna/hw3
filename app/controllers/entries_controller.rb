@@ -17,7 +17,7 @@ class EntriesController < ApplicationController
     #data we enter
     @entry["title"]=params["title"]
     @entry["description"]=params["description"]
-    #@entry["date"]=params["date"]
+    @entry["posted_on"]=params["posted_on"]
     #tie to place
     @entry["place_id"]=params["place_id"]
     #save
